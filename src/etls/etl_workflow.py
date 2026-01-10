@@ -37,6 +37,6 @@ def Api2Bronze(api_url: str):
 
 if __name__ == "__main__":
 
-    api_url = "https://api.energy-charts.info/price?bzn=DE-LU" 
+    api_url = "https://api.energy-charts.info/price?bzn=DEdfd-LU" 
 
     Api2Bronze(api_url=api_url)

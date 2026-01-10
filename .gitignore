@@ -1,0 +1,94 @@
+# ---------------------------
+# Python
+# ---------------------------
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+
+# C extensions
+*.so
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Jupyter notebooks
+.ipynb_checkpoints/
+
+# Logs
+*.log
+
+# Unit test / coverage
+htmlcov/
+.coverage
+.coverage.*
+.cache
+pytest_cache/
+nosetests.xml
+coverage.xml
+
+# Byte-compiled / optimized / DLL files
+*.dll
+*.dylib
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE & Editor directories
+# PyCharm
+.idea/
+# VSCode
+.vscode/
+# IntelliJ
+*.iml
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+*.swo
+
+# Environment files
+.env
+.env.*
+*. secrets
+*.token
+
+# Local config
+config.local.json
+settings.local.json
+
+# ---------------------------
+# Project-specific
+# ---------------------------
+
+# Data storage (if you don't want raw API responses committed)
+data_storage/bronze/
+data_storage/silver/
+data_storage/gold/
+
+# Or keep metadata and delete large raw files:
+# data_storage/bronze/*.json
+# data_storage/bronze/*.meta.json
+
+# Cache folders
+.cache/
+
+# Poetry
+poetry.lock
+# (optional — only ignore if you don’t want lockfile versioning)
+
+# ---------------------------
+# Notebook outputs
+# ---------------------------
+*/.ipynb_checkpoints/

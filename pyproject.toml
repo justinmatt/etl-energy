@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "etl-energy"
+version = "0.1.0"
+description = ""
+authors = ["Justin Mathew <justinmatt28@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+pyspark = "^4.0.1"
+requests = "^2.32.5"
+logging = "^0.4.9.6"
+jupyterlab = "^4.5.0"
+notebook = "^7.5.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

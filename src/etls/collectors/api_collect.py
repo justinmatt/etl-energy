@@ -60,7 +60,7 @@ class APIClient:
 
 
     def _timestamp(self):
-        return datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S")
+        return datetime.now(timezone.utc).strftime("%Y-%m-%d-%H-%M-%S")
 
 
   
@@ -101,11 +101,11 @@ class APIClient:
                 
                 response.raise_for_status()
 
-                data = response.json()
+                request_data = response.json()
 
                 # Save data
-                logging.info('Saving the api data in bronze')
-                self._save_json(data, data_path)
+                #logging.info('Saving the api data in bronze')
+                #self._save_json(request_data, data_path)
 
                 # Metadata success
                 metadata["status"] = "success"
@@ -125,11 +125,13 @@ class APIClient:
 
 
         # Save metadata
-        logging.info('Saving the meta data..')
-        self._save_json(metadata, meta_path)
+        #logging.info('Saving the meta data..')
+        #self._save_json(metadata, meta_path)
 
         return {
             "data_path": data_path,
             "meta_path": meta_path,
             "metadata": metadata,
+            "req_data": request_data,
+            "status":metadata["status"]
         }

@@ -34,13 +34,3 @@ def TransformationPowerDataGold(table: str, spark: SparkSession = spark)->DataFr
 
     return df_gold
 
-
-
-
-if __name__ == "__main__":
-
-    table_name = 'energy_price_silver'
-
-    gold_df = TransformationPowerDataGold(table=table_name, spark=spark)
-
-    write_to_postgres(df=gold_df, table_name='energy_price_gold')

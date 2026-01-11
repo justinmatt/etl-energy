@@ -92,3 +92,4 @@ poetry.lock
 # Notebook outputs
 # ---------------------------
 */.ipynb_checkpoints/
+*/test_*.ipynb

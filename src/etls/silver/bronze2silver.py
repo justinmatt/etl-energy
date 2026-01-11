@@ -38,12 +38,3 @@ def TransformationPowerData(json_data: Dict, schema: StructType, spark: SparkSes
     return df_silver
 
 
-
-
-if __name__ == "__main__":
-    json_load = load_json_data(bronze_path=BRONZE_PATH, meta_path=BRONZE_PATH_META)
-    json_data = json_load.json_data | json_load.meta_data
-
-    silver_df = TransformationPowerData(json_data=json_data, schema=bronze_schema, spark=spark)
-
-    write_to_postgres(df=silver_df, table_name='energy_price_silver')
